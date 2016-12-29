@@ -120,7 +120,7 @@ module.exports = function (app) {
       if (req.params.command == 'digital') {
 
         // Read
-        rpio.open(parseInt(req.params.pin), rpio.INPUT);
+        rpio.open(parseInt(req.params.pin), rpio.OUTPUT);
         value = rpio.read(parseInt(req.params.pin));
 
         // Send answer
